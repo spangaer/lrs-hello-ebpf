@@ -2,16 +2,6 @@
 
 Goal of this (learning) project is to successfully run a hello world eBPF Rust program.
 
-Build the eBPF object with:
-
-```sh
-cargo build-ebpf
-```
-
-The object is built for `bpfel-unknown-none` under the workspace's shared
-`target/` directory. The devcontainer provides `bpf-linker`; the Rust toolchain
-file selects nightly and installs `rust-src` for building `core` for BPF.
-
 ## TODO
 
 - split the project into separate user-space and eBPF crates:

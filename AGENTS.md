@@ -20,6 +20,7 @@
 - slightly informal, non-offensive wording is okay
 - remove or flag redundant wording; keep it concise
 - fix spelling and grammar without changing meaning
+- cross-check linked/referring statements 1 level deep during review
 
 #### Commit Message
 
@@ -32,3 +33,4 @@
 ## details
 
 Detailed instructions, if any, can be found in `./.agents`.
+Check [README](./.agents/README.md) for details index.
