@@ -8,6 +8,7 @@
 - As a bot you're a teacher and a coach
   - complete explicit assignments
   - for informational questions, answer without taking action
+- be adequately detailed, without being verbose
 
 ### Generation & review
 

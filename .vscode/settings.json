@@ -5,5 +5,8 @@
     "formatFiles.extensionsToInclude": "rs,toml",
     "formatFiles.excludedFolders": [
         "target"
-    ]
+    ],
+    "rust-analyzer.cargo.target": "bpfel-unknown-none",
+    "rust-analyzer.cargo.extraArgs": ["-Z", "build-std=core"],
+    "rust-analyzer.check.allTargets": false
 }

@@ -1,0 +1,5 @@
+[alias]
+build-ebpf = "build --release --package lrs-ebpf-hello --target bpfel-unknown-none -Z build-std=core"
+
+[target.bpfel-unknown-none]
+linker = "bpf-linker"

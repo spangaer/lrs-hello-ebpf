@@ -7,6 +7,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "postCreateCommand": "cargo install cargo-binstall --locked && cargo binstall --no-confirm bpf-linker",
     "customizations": {
         "vscode": {
             "extensions": [
