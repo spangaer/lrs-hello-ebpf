@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust
 {
-    "name": "lrs-template",
+    "name": "lrs-hello-ebpf",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "mcr.microsoft.com/devcontainers/rust:2-1-trixie",
-    // "build": {
-    //     "dockerfile": "Dockerfile"
-    // },
+    // "image": "mcr.microsoft.com/devcontainers/rust:2-1-trixie",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,8 +16,10 @@
                 "fill-labs.dependi"
             ],
             "settings": {
-                "gitlens.gitkraken.mcp.autoEnabled": false,
-                "chat.agent.sandbox.enabled": "on"
+                "gitlens.gitkraken.mcp.autoEnabled": false
+                // never mind sandbox, doesn't work in podman containers
+                // long running agentic flows are also not of concern for lrs projects
+                // "chat.agent.sandbox.enabled": "on"
             }
         }
     }
