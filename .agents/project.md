@@ -12,12 +12,16 @@ The object is built for `bpfel-unknown-none` under the workspace's shared
 `target/` directory. The devcontainer provides `bpf-linker`; the Rust toolchain
 file selects nightly and installs `rust-src` for building `core` for BPF.
 
+`bpftool` and `bindgen` are installed for generating kernel bindings with
+`aya-tool`.
+
 ## Program
 
 ### Hook
 
-The program uses the BPF LSM `inode_create` hook, which runs when a file is
-created.
+The program uses the BPF LSM `inode_create` hook and logs an attempted basename
+with `aya_log_ebpf::info!`. The log records require a userspace Aya logger; the
+object also requires a userspace loader to load and attach the LSM program.
 
 ### Loading requirements
 
